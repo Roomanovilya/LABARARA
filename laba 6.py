@@ -34,8 +34,8 @@ for i in range(per):
     a.append(a1)
     
 # подсчет ненулевых элементов
-def count_nonzero(lst):
-    return sum(1 for i in lst if i != 0)
+def count_nonzero(a):
+    return sum(1 for i in a if i != 0)
 # Сортировка списка по количеству ненулевых элементов
 a.sort(key=lambda x: (count_nonzero(x), x))
 
@@ -54,8 +54,8 @@ def generate_treasure_arrangements(K, T):
     a = list(product(range(T + 1), repeat=K))
     
     # подсчет ненулевых элементов
-    def count_nonzero(lst):
-        return sum(1 for i in lst if i != 0)
+    def count_nonzero(a):
+        return sum(1 for i in a if i != 0)
     # Сортировка списка по количеству ненулевых элементов
     a.sort(key=lambda x: (count_nonzero(x), x))
     return a
